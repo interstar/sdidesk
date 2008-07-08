@@ -1,0 +1,21 @@
+F:\pro\Rac\sdidesk\SdiDesk.NET 2008\SdiDesk.NET\SdiDesk.NET\obj\Debug\ResolveAssemblyReference.cache
+F:\pro\Rac\sdidesk\SdiDesk.NET 2008\SdiDesk.NET\SdiDesk.NET\obj\Debug\SdiDesk.NET.WADSMainForm.resources
+F:\pro\Rac\sdidesk\SdiDesk.NET 2008\SdiDesk.NET\SdiDesk.NET\obj\Debug\SdiDesk.NET.Resources.resources
+F:\pro\Rac\sdidesk\SdiDesk.NET 2008\SdiDesk.NET\SdiDesk.NET\obj\Debug\SdiDesk.NET.vbproj.GenerateResource.Cache
+F:\pro\Rac\sdidesk\SdiDesk.NET 2008\SdiDesk.NET\SdiDesk.NET\obj\Debug\Interop.MSFlexGridLib.dll
+F:\pro\Rac\sdidesk\SdiDesk.NET 2008\SdiDesk.NET\SdiDesk.NET\obj\Debug\SdiDesk.NET.vbproj.ResolveComReference.cache
+F:\pro\Rac\sdidesk\SdiDesk.NET 2008\SdiDesk.NET\SdiDesk.NET\bin\Debug\SdiDesk.NET.exe
+F:\pro\Rac\sdidesk\SdiDesk.NET 2008\SdiDesk.NET\SdiDesk.NET\bin\Debug\SdiDesk.NET.pdb
+F:\pro\Rac\sdidesk\SdiDesk.NET 2008\SdiDesk.NET\SdiDesk.NET\bin\Debug\SdiDesk.NET.xml
+F:\pro\Rac\sdidesk\SdiDesk.NET 2008\SdiDesk.NET\SdiDesk.NET\bin\Debug\Interop.MSFlexGridLib.dll
+F:\pro\Rac\sdidesk\SdiDesk.NET 2008\SdiDesk.NET\SdiDesk.NET\obj\Debug\SdiDesk.NET.exe
+F:\pro\Rac\sdidesk\SdiDesk.NET 2008\SdiDesk.NET\SdiDesk.NET\obj\Debug\SdiDesk.NET.xml
+F:\pro\Rac\sdidesk\SdiDesk.NET 2008\SdiDesk.NET\SdiDesk.NET\obj\Debug\SdiDesk.NET.pdb
+F:\pro\Rac\sdidesk\SdiDesk.NET 2008\SdiDesk.NET\SdiDesk.NET\obj\Debug\AxInterop.MSFlexGridLib.dll
+F:\pro\Rac\sdidesk\SdiDesk.NET 2008\SdiDesk.NET\SdiDesk.NET\bin\Debug\AxInterop.MSFlexGridLib.dll
+F:\pro\Rac\sdidesk\SdiDesk.NET 2008\SdiDesk.NET old 2\SdiDesk.NET\obj\Debug\Interop.MSFlexGridLib.dll
+F:\pro\Rac\sdidesk\SdiDesk.NET 2008\SdiDesk.NET old 2\SdiDesk.NET\obj\Debug\AxInterop.MSFlexGridLib.dll
+F:\pro\Rac\sdidesk\SdiDesk.NET 2008\SdiDesk.NET old 2\SdiDesk.NET\obj\Debug\SdiDesk.NET.vbproj.ResolveComReference.cache
+F:\pro\Rac\sdidesk\SdiDesk.NET 2008\SdiDesk.NET old 2\SdiDesk.NET\obj\Debug\SdiDesk.NET.exe
+F:\pro\Rac\sdidesk\SdiDesk.NET 2008\SdiDesk.NET old 2\SdiDesk.NET\obj\Debug\SdiDesk.NET.xml
+F:\pro\Rac\sdidesk\SdiDesk.NET 2008\SdiDesk.NET old 2\SdiDesk.NET\obj\Debug\SdiDesk.NET.pdb

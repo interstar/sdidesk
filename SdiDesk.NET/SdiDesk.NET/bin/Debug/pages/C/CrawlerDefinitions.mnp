@@ -1,0 +1,9 @@
+CrawlerDefinitions
+
+12:00:00 AM 
+5/23/2008 
+name,, type,, maxDepth,, excluded pages,, excluded link types
+____
+simple_recursive ,, recursive,, -1,, ,, 
+depth_one,, recursive,, 1,, ,, ,, 
+recent_changes,, recent,, ,, ,, ,,

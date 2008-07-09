@@ -43,8 +43,7 @@
 	Public WithEvents PageNameText As System.Windows.Forms.TextBox
 	Public WithEvents ForwardButton As System.Windows.Forms.Button
 	Public WithEvents NavFrame As System.Windows.Forms.Panel
-	Public WithEvents ExportButton As System.Windows.Forms.Button
-	Public WithEvents HistoryList As System.Windows.Forms.ComboBox
+    Public WithEvents HistoryList As System.Windows.Forms.ComboBox
 	Public WithEvents NewNetworkButton As System.Windows.Forms.Button
 	Public WithEvents SaveButton As System.Windows.Forms.Button
 	Public WithEvents NewButton As System.Windows.Forms.Button
@@ -114,9 +113,9 @@
         Me.DateCreatedLabel = New System.Windows.Forms.Label
         Me.DateLastEditedLabel = New System.Windows.Forms.Label
         Me.ViewFrame = New System.Windows.Forms.Panel
+        Me.RawText = New System.Windows.Forms.RichTextBox
         Me.HtmlView = New System.Windows.Forms.WebBrowser
         Me.NetworkCanvas = New System.Windows.Forms.PictureBox
-        Me.RawText = New System.Windows.Forms.RichTextBox
         Me.NavFrame = New System.Windows.Forms.Panel
         Me.FindButton = New System.Windows.Forms.Button
         Me.RecentButton = New System.Windows.Forms.Button
@@ -127,7 +126,6 @@
         Me.PageNameText = New System.Windows.Forms.TextBox
         Me.ForwardButton = New System.Windows.Forms.Button
         Me.PageFrame = New System.Windows.Forms.Panel
-        Me.ExportButton = New System.Windows.Forms.Button
         Me.HistoryList = New System.Windows.Forms.ComboBox
         Me.NewNetworkButton = New System.Windows.Forms.Button
         Me.SaveButton = New System.Windows.Forms.Button
@@ -292,7 +290,7 @@
         '
         'ViewFrame
         '
-        Me.ViewFrame.BackColor = System.Drawing.Color.FromArgb(CType(CType(128, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(128, Byte), Integer))
+        Me.ViewFrame.BackColor = System.Drawing.Color.Teal
         Me.ViewFrame.Controls.Add(Me.RawText)
         Me.ViewFrame.Controls.Add(Me.HtmlView)
         Me.ViewFrame.Controls.Add(Me.NetworkCanvas)
@@ -302,8 +300,17 @@
         Me.ViewFrame.Location = New System.Drawing.Point(4, 100)
         Me.ViewFrame.Name = "ViewFrame"
         Me.ViewFrame.RightToLeft = System.Windows.Forms.RightToLeft.No
-        Me.ViewFrame.Size = New System.Drawing.Size(509, 425)
+        Me.ViewFrame.Size = New System.Drawing.Size(617, 425)
         Me.ViewFrame.TabIndex = 8
+        '
+        'RawText
+        '
+        Me.RawText.Font = New System.Drawing.Font("Courier New", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.RawText.Location = New System.Drawing.Point(4, 4)
+        Me.RawText.Name = "RawText"
+        Me.RawText.Size = New System.Drawing.Size(610, 409)
+        Me.RawText.TabIndex = 12
+        Me.RawText.Text = ""
         '
         'HtmlView
         '
@@ -327,18 +334,9 @@
         Me.NetworkCanvas.TabStop = False
         Me.NetworkCanvas.Visible = False
         '
-        'RawText
-        '
-        Me.RawText.Font = New System.Drawing.Font("Courier New", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.RawText.Location = New System.Drawing.Point(4, 4)
-        Me.RawText.Name = "RawText"
-        Me.RawText.Size = New System.Drawing.Size(497, 409)
-        Me.RawText.TabIndex = 12
-        Me.RawText.Text = ""
-        '
         'NavFrame
         '
-        Me.NavFrame.BackColor = System.Drawing.Color.FromArgb(CType(CType(128, Byte), Integer), CType(CType(128, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.NavFrame.BackColor = System.Drawing.Color.Teal
         Me.NavFrame.Controls.Add(Me.FindButton)
         Me.NavFrame.Controls.Add(Me.RecentButton)
         Me.NavFrame.Controls.Add(Me.GoButton)
@@ -353,7 +351,7 @@
         Me.NavFrame.Location = New System.Drawing.Point(4, 28)
         Me.NavFrame.Name = "NavFrame"
         Me.NavFrame.RightToLeft = System.Windows.Forms.RightToLeft.No
-        Me.NavFrame.Size = New System.Drawing.Size(585, 33)
+        Me.NavFrame.Size = New System.Drawing.Size(617, 33)
         Me.NavFrame.TabIndex = 0
         '
         'FindButton
@@ -362,10 +360,10 @@
         Me.FindButton.Cursor = System.Windows.Forms.Cursors.Default
         Me.FindButton.Font = New System.Drawing.Font("Arial", 9.75!, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.FindButton.ForeColor = System.Drawing.SystemColors.ControlText
-        Me.FindButton.Location = New System.Drawing.Point(540, 4)
+        Me.FindButton.Location = New System.Drawing.Point(550, 4)
         Me.FindButton.Name = "FindButton"
         Me.FindButton.RightToLeft = System.Windows.Forms.RightToLeft.No
-        Me.FindButton.Size = New System.Drawing.Size(41, 25)
+        Me.FindButton.Size = New System.Drawing.Size(44, 25)
         Me.FindButton.TabIndex = 23
         Me.FindButton.Text = "Find"
         Me.FindButton.UseVisualStyleBackColor = False
@@ -376,7 +374,7 @@
         Me.RecentButton.Cursor = System.Windows.Forms.Cursors.Default
         Me.RecentButton.Font = New System.Drawing.Font("Arial", 9.75!, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.RecentButton.ForeColor = System.Drawing.SystemColors.ControlText
-        Me.RecentButton.Location = New System.Drawing.Point(120, 4)
+        Me.RecentButton.Location = New System.Drawing.Point(132, 4)
         Me.RecentButton.Name = "RecentButton"
         Me.RecentButton.RightToLeft = System.Windows.Forms.RightToLeft.No
         Me.RecentButton.Size = New System.Drawing.Size(57, 25)
@@ -390,7 +388,7 @@
         Me.GoButton.Cursor = System.Windows.Forms.Cursors.Default
         Me.GoButton.Font = New System.Drawing.Font("Arial", 9.75!, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.GoButton.ForeColor = System.Drawing.SystemColors.ControlText
-        Me.GoButton.Location = New System.Drawing.Point(496, 4)
+        Me.GoButton.Location = New System.Drawing.Point(506, 4)
         Me.GoButton.Name = "GoButton"
         Me.GoButton.RightToLeft = System.Windows.Forms.RightToLeft.No
         Me.GoButton.Size = New System.Drawing.Size(41, 25)
@@ -404,7 +402,7 @@
         Me.AllButton.Cursor = System.Windows.Forms.Cursors.Default
         Me.AllButton.Font = New System.Drawing.Font("Arial", 9.75!, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.AllButton.ForeColor = System.Drawing.SystemColors.ControlText
-        Me.AllButton.Location = New System.Drawing.Point(180, 4)
+        Me.AllButton.Location = New System.Drawing.Point(192, 4)
         Me.AllButton.Name = "AllButton"
         Me.AllButton.RightToLeft = System.Windows.Forms.RightToLeft.No
         Me.AllButton.Size = New System.Drawing.Size(41, 25)
@@ -421,7 +419,7 @@
         Me.StartPageButton.Location = New System.Drawing.Point(76, 4)
         Me.StartPageButton.Name = "StartPageButton"
         Me.StartPageButton.RightToLeft = System.Windows.Forms.RightToLeft.No
-        Me.StartPageButton.Size = New System.Drawing.Size(41, 25)
+        Me.StartPageButton.Size = New System.Drawing.Size(53, 25)
         Me.StartPageButton.TabIndex = 14
         Me.StartPageButton.Text = "Start"
         Me.StartPageButton.UseVisualStyleBackColor = False
@@ -447,11 +445,11 @@
         Me.PageNameText.Cursor = System.Windows.Forms.Cursors.IBeam
         Me.PageNameText.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.PageNameText.ForeColor = System.Drawing.SystemColors.WindowText
-        Me.PageNameText.Location = New System.Drawing.Point(224, 4)
+        Me.PageNameText.Location = New System.Drawing.Point(240, 5)
         Me.PageNameText.MaxLength = 0
         Me.PageNameText.Name = "PageNameText"
         Me.PageNameText.RightToLeft = System.Windows.Forms.RightToLeft.No
-        Me.PageNameText.Size = New System.Drawing.Size(269, 26)
+        Me.PageNameText.Size = New System.Drawing.Size(260, 26)
         Me.PageNameText.TabIndex = 2
         '
         'ForwardButton
@@ -471,7 +469,6 @@
         'PageFrame
         '
         Me.PageFrame.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(128, Byte), Integer), CType(CType(128, Byte), Integer))
-        Me.PageFrame.Controls.Add(Me.ExportButton)
         Me.PageFrame.Controls.Add(Me.HistoryList)
         Me.PageFrame.Controls.Add(Me.NewNetworkButton)
         Me.PageFrame.Controls.Add(Me.SaveButton)
@@ -485,22 +482,8 @@
         Me.PageFrame.Location = New System.Drawing.Point(4, 64)
         Me.PageFrame.Name = "PageFrame"
         Me.PageFrame.RightToLeft = System.Windows.Forms.RightToLeft.No
-        Me.PageFrame.Size = New System.Drawing.Size(585, 33)
+        Me.PageFrame.Size = New System.Drawing.Size(617, 33)
         Me.PageFrame.TabIndex = 4
-        '
-        'ExportButton
-        '
-        Me.ExportButton.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(128, Byte), Integer))
-        Me.ExportButton.Cursor = System.Windows.Forms.Cursors.Default
-        Me.ExportButton.Font = New System.Drawing.Font("Arial", 9.75!, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.ExportButton.ForeColor = System.Drawing.SystemColors.ControlText
-        Me.ExportButton.Location = New System.Drawing.Point(356, 4)
-        Me.ExportButton.Name = "ExportButton"
-        Me.ExportButton.RightToLeft = System.Windows.Forms.RightToLeft.No
-        Me.ExportButton.Size = New System.Drawing.Size(61, 25)
-        Me.ExportButton.TabIndex = 28
-        Me.ExportButton.Text = "Export"
-        Me.ExportButton.UseVisualStyleBackColor = False
         '
         'HistoryList
         '
@@ -509,7 +492,7 @@
         Me.HistoryList.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.HistoryList.Font = New System.Drawing.Font("Times New Roman", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.HistoryList.ForeColor = System.Drawing.SystemColors.WindowText
-        Me.HistoryList.Location = New System.Drawing.Point(428, 4)
+        Me.HistoryList.Location = New System.Drawing.Point(356, 4)
         Me.HistoryList.Name = "HistoryList"
         Me.HistoryList.RightToLeft = System.Windows.Forms.RightToLeft.No
         Me.HistoryList.Size = New System.Drawing.Size(153, 23)
@@ -604,243 +587,243 @@
         Me.MainMenu1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.menuFile, Me.menuPage, Me.menuStandard, Me.menuExport, Me.menuSettings, Me.menuHelp})
         Me.MainMenu1.Location = New System.Drawing.Point(0, 0)
         Me.MainMenu1.Name = "MainMenu1"
-        Me.MainMenu1.Size = New System.Drawing.Size(530, 24)
+        Me.MainMenu1.Size = New System.Drawing.Size(633, 24)
         Me.MainMenu1.TabIndex = 28
         '
         'menuFile
         '
         Me.menuFile.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.menuNewPage, Me.menuNewNet, Me.menuSavePage, Me._menuSep1_0, Me.menuDelete, Me._menuSep4_1, Me.menuDirectoryChooser, Me.menuSepSDJI, Me.menuExit})
         Me.menuFile.Name = "menuFile"
-        Me.menuFile.Size = New System.Drawing.Size(35, 20)
+        Me.menuFile.Size = New System.Drawing.Size(37, 20)
         Me.menuFile.Text = "&File"
         '
         'menuNewPage
         '
         Me.menuNewPage.Name = "menuNewPage"
         Me.menuNewPage.ShortcutKeys = CType((System.Windows.Forms.Keys.Control Or System.Windows.Forms.Keys.N), System.Windows.Forms.Keys)
-        Me.menuNewPage.Size = New System.Drawing.Size(189, 22)
+        Me.menuNewPage.Size = New System.Drawing.Size(191, 22)
         Me.menuNewPage.Text = "&New Page"
         '
         'menuNewNet
         '
         Me.menuNewNet.Name = "menuNewNet"
         Me.menuNewNet.ShortcutKeys = CType((System.Windows.Forms.Keys.Control Or System.Windows.Forms.Keys.M), System.Windows.Forms.Keys)
-        Me.menuNewNet.Size = New System.Drawing.Size(189, 22)
+        Me.menuNewNet.Size = New System.Drawing.Size(191, 22)
         Me.menuNewNet.Text = "New Network"
         '
         'menuSavePage
         '
         Me.menuSavePage.Name = "menuSavePage"
         Me.menuSavePage.ShortcutKeys = CType((System.Windows.Forms.Keys.Control Or System.Windows.Forms.Keys.S), System.Windows.Forms.Keys)
-        Me.menuSavePage.Size = New System.Drawing.Size(189, 22)
+        Me.menuSavePage.Size = New System.Drawing.Size(191, 22)
         Me.menuSavePage.Text = "&Save Page"
         '
         '_menuSep1_0
         '
         Me._menuSep1_0.Name = "_menuSep1_0"
-        Me._menuSep1_0.Size = New System.Drawing.Size(186, 6)
+        Me._menuSep1_0.Size = New System.Drawing.Size(188, 6)
         '
         'menuDelete
         '
         Me.menuDelete.Name = "menuDelete"
         Me.menuDelete.ShortcutKeys = CType((System.Windows.Forms.Keys.Control Or System.Windows.Forms.Keys.D), System.Windows.Forms.Keys)
-        Me.menuDelete.Size = New System.Drawing.Size(189, 22)
+        Me.menuDelete.Size = New System.Drawing.Size(191, 22)
         Me.menuDelete.Text = "&Delete Page"
         '
         '_menuSep4_1
         '
         Me._menuSep4_1.Name = "_menuSep4_1"
-        Me._menuSep4_1.Size = New System.Drawing.Size(186, 6)
+        Me._menuSep4_1.Size = New System.Drawing.Size(188, 6)
         '
         'menuDirectoryChooser
         '
         Me.menuDirectoryChooser.Name = "menuDirectoryChooser"
         Me.menuDirectoryChooser.ShortcutKeys = System.Windows.Forms.Keys.F1
-        Me.menuDirectoryChooser.Size = New System.Drawing.Size(189, 22)
+        Me.menuDirectoryChooser.Size = New System.Drawing.Size(191, 22)
         Me.menuDirectoryChooser.Text = "Change Directory"
         '
         'menuSepSDJI
         '
         Me.menuSepSDJI.Name = "menuSepSDJI"
-        Me.menuSepSDJI.Size = New System.Drawing.Size(186, 6)
+        Me.menuSepSDJI.Size = New System.Drawing.Size(188, 6)
         '
         'menuExit
         '
         Me.menuExit.Name = "menuExit"
         Me.menuExit.ShortcutKeys = CType((System.Windows.Forms.Keys.Control Or System.Windows.Forms.Keys.W), System.Windows.Forms.Keys)
-        Me.menuExit.Size = New System.Drawing.Size(189, 22)
+        Me.menuExit.Size = New System.Drawing.Size(191, 22)
         Me.menuExit.Text = "Exit"
         '
         'menuPage
         '
         Me.menuPage.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.menuEdit, Me.menuPreview, Me.menuRaw, Me.menuSep2, Me.menuHistory})
         Me.menuPage.Name = "menuPage"
-        Me.menuPage.Size = New System.Drawing.Size(43, 20)
+        Me.menuPage.Size = New System.Drawing.Size(45, 20)
         Me.menuPage.Text = "&Page"
         '
         'menuEdit
         '
         Me.menuEdit.Name = "menuEdit"
         Me.menuEdit.ShortcutKeys = CType((System.Windows.Forms.Keys.Control Or System.Windows.Forms.Keys.E), System.Windows.Forms.Keys)
-        Me.menuEdit.Size = New System.Drawing.Size(162, 22)
+        Me.menuEdit.Size = New System.Drawing.Size(157, 22)
         Me.menuEdit.Text = "&Edit"
         '
         'menuPreview
         '
         Me.menuPreview.Name = "menuPreview"
         Me.menuPreview.ShortcutKeys = CType((System.Windows.Forms.Keys.Control Or System.Windows.Forms.Keys.U), System.Windows.Forms.Keys)
-        Me.menuPreview.Size = New System.Drawing.Size(162, 22)
+        Me.menuPreview.Size = New System.Drawing.Size(157, 22)
         Me.menuPreview.Text = "Preview"
         '
         'menuRaw
         '
         Me.menuRaw.Name = "menuRaw"
         Me.menuRaw.ShortcutKeys = CType((System.Windows.Forms.Keys.Control Or System.Windows.Forms.Keys.R), System.Windows.Forms.Keys)
-        Me.menuRaw.Size = New System.Drawing.Size(162, 22)
+        Me.menuRaw.Size = New System.Drawing.Size(157, 22)
         Me.menuRaw.Text = "&Raw"
         '
         'menuSep2
         '
         Me.menuSep2.Name = "menuSep2"
-        Me.menuSep2.Size = New System.Drawing.Size(159, 6)
+        Me.menuSep2.Size = New System.Drawing.Size(154, 6)
         '
         'menuHistory
         '
         Me.menuHistory.Name = "menuHistory"
         Me.menuHistory.ShortcutKeys = CType((System.Windows.Forms.Keys.Control Or System.Windows.Forms.Keys.H), System.Windows.Forms.Keys)
-        Me.menuHistory.Size = New System.Drawing.Size(162, 22)
+        Me.menuHistory.Size = New System.Drawing.Size(157, 22)
         Me.menuHistory.Text = "&History"
         '
         'menuStandard
         '
         Me.menuStandard.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.menuBack, Me.menuForward, Me.menuSep3, Me.menuStart_Renamed, Me.menuRecentChanges, Me.menuAll})
         Me.menuStandard.Name = "menuStandard"
-        Me.menuStandard.Size = New System.Drawing.Size(62, 20)
+        Me.menuStandard.Size = New System.Drawing.Size(66, 20)
         Me.menuStandard.Text = "&Navigate"
         '
         'menuBack
         '
         Me.menuBack.Name = "menuBack"
         Me.menuBack.ShortcutKeys = CType((System.Windows.Forms.Keys.Control Or System.Windows.Forms.Keys.J), System.Windows.Forms.Keys)
-        Me.menuBack.Size = New System.Drawing.Size(202, 22)
+        Me.menuBack.Size = New System.Drawing.Size(200, 22)
         Me.menuBack.Text = "Back"
         '
         'menuForward
         '
         Me.menuForward.Name = "menuForward"
         Me.menuForward.ShortcutKeys = CType((System.Windows.Forms.Keys.Control Or System.Windows.Forms.Keys.K), System.Windows.Forms.Keys)
-        Me.menuForward.Size = New System.Drawing.Size(202, 22)
+        Me.menuForward.Size = New System.Drawing.Size(200, 22)
         Me.menuForward.Text = "Forward"
         '
         'menuSep3
         '
         Me.menuSep3.Name = "menuSep3"
-        Me.menuSep3.Size = New System.Drawing.Size(199, 6)
+        Me.menuSep3.Size = New System.Drawing.Size(197, 6)
         '
         'menuStart_Renamed
         '
         Me.menuStart_Renamed.Name = "menuStart_Renamed"
         Me.menuStart_Renamed.ShortcutKeys = CType((System.Windows.Forms.Keys.Control Or System.Windows.Forms.Keys.T), System.Windows.Forms.Keys)
-        Me.menuStart_Renamed.Size = New System.Drawing.Size(202, 22)
+        Me.menuStart_Renamed.Size = New System.Drawing.Size(200, 22)
         Me.menuStart_Renamed.Text = "S&tart Page"
         '
         'menuRecentChanges
         '
         Me.menuRecentChanges.Name = "menuRecentChanges"
         Me.menuRecentChanges.ShortcutKeys = CType((System.Windows.Forms.Keys.Control Or System.Windows.Forms.Keys.B), System.Windows.Forms.Keys)
-        Me.menuRecentChanges.Size = New System.Drawing.Size(202, 22)
+        Me.menuRecentChanges.Size = New System.Drawing.Size(200, 22)
         Me.menuRecentChanges.Text = "Recent Changes"
         '
         'menuAll
         '
         Me.menuAll.Name = "menuAll"
         Me.menuAll.ShortcutKeys = CType((System.Windows.Forms.Keys.Control Or System.Windows.Forms.Keys.A), System.Windows.Forms.Keys)
-        Me.menuAll.Size = New System.Drawing.Size(202, 22)
+        Me.menuAll.Size = New System.Drawing.Size(200, 22)
         Me.menuAll.Text = "&All"
         '
         'menuExport
         '
         Me.menuExport.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.menuExportThisPageHtml, Me.menuShowExporters, Me.menuShowExports, Me.menuShowCrawlers})
         Me.menuExport.Name = "menuExport"
-        Me.menuExport.Size = New System.Drawing.Size(51, 20)
+        Me.menuExport.Size = New System.Drawing.Size(52, 20)
         Me.menuExport.Text = "Export"
         '
         'menuExportThisPageHtml
         '
         Me.menuExportThisPageHtml.Name = "menuExportThisPageHtml"
-        Me.menuExportThisPageHtml.Size = New System.Drawing.Size(217, 22)
+        Me.menuExportThisPageHtml.Size = New System.Drawing.Size(219, 22)
         Me.menuExportThisPageHtml.Text = "Export This Page (as HTML)"
         '
         'menuShowExporters
         '
         Me.menuShowExporters.Name = "menuShowExporters"
-        Me.menuShowExporters.Size = New System.Drawing.Size(217, 22)
+        Me.menuShowExporters.Size = New System.Drawing.Size(219, 22)
         Me.menuShowExporters.Text = "Show Exporters"
         '
         'menuShowExports
         '
         Me.menuShowExports.Name = "menuShowExports"
-        Me.menuShowExports.Size = New System.Drawing.Size(217, 22)
+        Me.menuShowExports.Size = New System.Drawing.Size(219, 22)
         Me.menuShowExports.Text = "Show Exports"
         '
         'menuShowCrawlers
         '
         Me.menuShowCrawlers.Name = "menuShowCrawlers"
-        Me.menuShowCrawlers.Size = New System.Drawing.Size(217, 22)
+        Me.menuShowCrawlers.Size = New System.Drawing.Size(219, 22)
         Me.menuShowCrawlers.Text = "Show Crawlers"
         '
         'menuSettings
         '
         Me.menuSettings.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.menuInterMap, Me.menuLinkTypeDefinitions, Me.menuCrawlers, Me.menuExports, Me.menuSep7, Me.menuBackLinks, Me.menuSep8})
         Me.menuSettings.Name = "menuSettings"
-        Me.menuSettings.Size = New System.Drawing.Size(58, 20)
+        Me.menuSettings.Size = New System.Drawing.Size(61, 20)
         Me.menuSettings.Text = "Settings"
         '
         'menuInterMap
         '
         Me.menuInterMap.Name = "menuInterMap"
-        Me.menuInterMap.Size = New System.Drawing.Size(135, 22)
+        Me.menuInterMap.Size = New System.Drawing.Size(130, 22)
         Me.menuInterMap.Text = "InterMap"
         '
         'menuLinkTypeDefinitions
         '
         Me.menuLinkTypeDefinitions.Name = "menuLinkTypeDefinitions"
-        Me.menuLinkTypeDefinitions.Size = New System.Drawing.Size(135, 22)
+        Me.menuLinkTypeDefinitions.Size = New System.Drawing.Size(130, 22)
         Me.menuLinkTypeDefinitions.Text = "Link Types"
         '
         'menuCrawlers
         '
         Me.menuCrawlers.Name = "menuCrawlers"
-        Me.menuCrawlers.Size = New System.Drawing.Size(135, 22)
+        Me.menuCrawlers.Size = New System.Drawing.Size(130, 22)
         Me.menuCrawlers.Text = "Crawlers"
         '
         'menuExports
         '
         Me.menuExports.Name = "menuExports"
-        Me.menuExports.Size = New System.Drawing.Size(135, 22)
+        Me.menuExports.Size = New System.Drawing.Size(130, 22)
         Me.menuExports.Text = "Exports"
         '
         'menuSep7
         '
         Me.menuSep7.Name = "menuSep7"
-        Me.menuSep7.Size = New System.Drawing.Size(132, 6)
+        Me.menuSep7.Size = New System.Drawing.Size(127, 6)
         '
         'menuBackLinks
         '
         Me.menuBackLinks.Name = "menuBackLinks"
-        Me.menuBackLinks.Size = New System.Drawing.Size(135, 22)
+        Me.menuBackLinks.Size = New System.Drawing.Size(130, 22)
         Me.menuBackLinks.Text = "BackLinks"
         '
         'menuSep8
         '
         Me.menuSep8.Name = "menuSep8"
-        Me.menuSep8.Size = New System.Drawing.Size(132, 6)
+        Me.menuSep8.Size = New System.Drawing.Size(127, 6)
         '
         'menuHelp
         '
         Me.menuHelp.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.menuHelpIndex, Me.menuAbout, Me.menuSep5, Me.menuShowOutlinks, Me.menuPageVariables, Me.menuShowPrepared, Me.menuShowHtml, Me.menuShowInterMap})
         Me.menuHelp.Name = "menuHelp"
-        Me.menuHelp.Size = New System.Drawing.Size(40, 20)
+        Me.menuHelp.Size = New System.Drawing.Size(44, 20)
         Me.menuHelp.Text = "&Help"
         '
         'menuHelpIndex
@@ -900,8 +883,8 @@
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 18.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(128, Byte), Integer), CType(CType(128, Byte), Integer))
-        Me.ClientSize = New System.Drawing.Size(530, 569)
+        Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
+        Me.ClientSize = New System.Drawing.Size(633, 569)
         Me.Controls.Add(Me.EditableCell)
         Me.Controls.Add(Me.DirListBox)
         Me.Controls.Add(Me.CategoryFrame)

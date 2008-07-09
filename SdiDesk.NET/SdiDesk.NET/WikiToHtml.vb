@@ -168,7 +168,8 @@ Friend Class WikiToHtml
         Dim bb As Short
         For Each l2 In lines
 
-            'UPGRADE_WARNING: Couldn't resolve default property of object l2. Click for more: 'ms-help://MS.VSCC.v80/dv_commoner/local/redirect.htm?keyword="6A50421D-15FE-4896-8A1B-2EC21E9037B2"'
+            'UPGRADE_WARNING: Couldn't resolve default property of object l2. 
+            'Click for more: 'ms-help://MS.VSCC.v80/dv_commoner/local/redirect.htm?keyword="6A50421D-15FE-4896-8A1B-2EC21E9037B2"'
             l = CStr(l2) ' change from a variant to real string
 
             ' turn off/on wiki

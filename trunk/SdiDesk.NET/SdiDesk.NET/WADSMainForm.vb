@@ -128,9 +128,9 @@ Friend Class WADSMainForm
 	
 	
 	
-	Private Sub ExportButton_Click(ByVal eventSender As System.Object, ByVal eventArgs As System.EventArgs) Handles ExportButton.Click
-		Call controller.actionInstantExport(MagicNotebook.getControllableModel.getCurrentPage.pageName)
-	End Sub
+    Private Sub ExportButton_Click(ByVal eventSender As System.Object, ByVal eventArgs As System.EventArgs)
+        Call controller.actionInstantExport(MagicNotebook.getControllableModel.getCurrentPage.pageName)
+    End Sub
 	
 	Private Sub FindButton_Click(ByVal eventSender As System.Object, ByVal eventArgs As System.EventArgs) Handles FindButton.Click
 		Call controller.processCommand("#find " & PageNameText.Text, False)
@@ -634,4 +634,8 @@ Cancelled:
 			TableEditor.Text = ""
 		End If
 	End Sub
+
+    Private Sub PageFrame_Paint(ByVal sender As System.Object, ByVal e As System.Windows.Forms.PaintEventArgs) Handles PageFrame.Paint
+
+    End Sub
 End Class

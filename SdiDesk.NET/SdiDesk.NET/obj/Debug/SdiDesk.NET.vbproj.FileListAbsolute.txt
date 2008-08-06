@@ -35,3 +35,9 @@ C:\Users\phil\Desktop\google\sdidesk\checkout\SdiDesk.NET\SdiDesk.NET\obj\Debug\
 C:\Users\phil\Desktop\google\sdidesk\checkout\SdiDesk.NET\SdiDesk.NET\obj\Debug\SdiDesk.NET.Resources.resources
 C:\Users\phil\Desktop\google\sdidesk\checkout\SdiDesk.NET\SdiDesk.NET\obj\Debug\SdiDesk.NET.WADSMainForm.resources
 C:\Users\phil\Desktop\google\sdidesk\checkout\SdiDesk.NET\SdiDesk.NET\obj\Debug\SdiDesk.NET.vbproj.GenerateResource.Cache
+C:\Users\phil\Documents\google-hosted\sdidesk\checkout\SdiDesk.NET\SdiDesk.NET\obj\Debug\Interop.MSFlexGridLib.dll
+C:\Users\phil\Documents\google-hosted\sdidesk\checkout\SdiDesk.NET\SdiDesk.NET\obj\Debug\AxInterop.MSFlexGridLib.dll
+C:\Users\phil\Documents\google-hosted\sdidesk\checkout\SdiDesk.NET\SdiDesk.NET\obj\Debug\SdiDesk.NET.vbproj.ResolveComReference.cache
+C:\Users\phil\Documents\google-hosted\sdidesk\checkout\SdiDesk.NET\SdiDesk.NET\obj\Debug\SdiDesk.NET.exe
+C:\Users\phil\Documents\google-hosted\sdidesk\checkout\SdiDesk.NET\SdiDesk.NET\obj\Debug\SdiDesk.NET.xml
+C:\Users\phil\Documents\google-hosted\sdidesk\checkout\SdiDesk.NET\SdiDesk.NET\obj\Debug\SdiDesk.NET.pdb

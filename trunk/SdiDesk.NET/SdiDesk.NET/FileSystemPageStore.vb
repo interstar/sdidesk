@@ -1,5 +1,6 @@
 Option Strict Off
 Option Explicit On
+Imports System.IO
 Friend Class FileSystemPageStore
 	Implements _PageStore
 	' FileSystemPageStore is an implementation of the PageStore interface
@@ -236,7 +237,7 @@ inputError:
 		FileOpen(stream, fName, OpenMode.Output)
 		PrintLine(stream, p.pageName)
 		PrintLine(stream, p.categories)
-		p.lastEdited = Today
+        p.lastEdited = DateTime.Now
 		PrintLine(stream, p.createdDate)
 		PrintLine(stream, p.lastEdited)
 		PrintLine(stream, p.raw)
@@ -355,7 +356,13 @@ forgetIt:
 	Private Sub Class_Initialize_Renamed()
 		slash = "\"
 		subPageSeparator = "--"
-		Call Me.setDataDirectory(My.Application.Info.DirectoryPath)
+        ' Call Me.setDataDirectory(My.Application.Info.DirectoryPath)
+        Dim path = New DirectoryInfo(Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments) & "\SdiDesk.NET\")
+        ' if the path doesn’t exist create it.
+        If Not path.Exists Then
+            path.Create()
+        End If
+        Call Me.setDataDirectory(path.ToString())
 		ti = New TimeIndex
 		'UPGRADE_WARNING: Couldn't resolve default property of object Me. Click for more: 'ms-help://MS.VSCC.v80/dv_commoner/local/redirect.htm?keyword="6A50421D-15FE-4896-8A1B-2EC21E9037B2"'
 		Call ti.init(Me)
@@ -462,7 +469,7 @@ AlreadyThere:
 	Private Function PageStore_safeDate(ByRef s As String) As Date Implements _PageStore.safeDate
 		' turns a string into a date but doesn't baulk if it breaks
 		Dim d1, d2 As Date
-		d2 = Today
+        d2 = DateTime.Now
 		On Error GoTo broken
 		d1 = CDate(s)
 		If d1 <> System.Date.FromOADate(0) Then ' make sure you overwrite any old zeroes
@@ -566,12 +573,16 @@ broken:
 		fileName = Me.pageNameToFileName((p.pageName))
 		Call shiftOldFiles(fileName)
 		
-		
-		' now update the timeIndex
-		Call ti.updateWord((p.pageName), (p.lastEdited), Today)
-		
-		' finally, save it
-		Call savePageToFile(p, fileName)
+        Try
+
+      	' now update the timeIndex
+            Call ti.updateWord((p.pageName), (p.lastEdited), DateTime.Now)
+        Catch ex As Exception
+            MessageBox.Show("PageStore_savePage exception = " & ex.Message)
+        End Try
+
+        ' finally, save it
+        Call savePageToFile(p, fileName)
 	End Sub
 	
 	Public Function PageStore_deletePage(ByRef pageName As String) As Object Implements _PageStore.deletePage

@@ -1,6 +1,7 @@
 Option Strict Off
 Option Explicit On
 Imports mshtml
+
 Friend Class DocumentHandler
 	
 	' this class handles the HTML document in the document viewer

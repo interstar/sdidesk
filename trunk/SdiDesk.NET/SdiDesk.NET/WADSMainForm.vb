@@ -207,6 +207,7 @@ Friend Class WADSMainForm
             Call setSize(VB6.PixelsToTwipsX(System.Windows.Forms.Screen.PrimaryScreen.Bounds.Width), VB6.PixelsToTwipsY(System.Windows.Forms.Screen.PrimaryScreen.Bounds.Height) - 420)
             Left = 0
             Top = 0
+            WADSMainForm_Resize(vbNull, Nothing)
         Catch ex As Exception
             MessageBox.Show(ex.Message)
         End Try

@@ -108,7 +108,8 @@ Friend Class CalendarMonth
 		If direction = 1 Then
 			d = getFirst(year1, month1)
 			While d < getFirst(year2, month2)
-				p = datePageName(Year(d), Month(d), VB.Day(d))
+                'p = datePageName(Year(d), Month(d), VB.Day(d))
+                p = datePageName(d.Year, d.Month, d.Day)
 				If store.pageExists(p) Then
 					s = s & includedDay(p, store)
 				End If
@@ -117,11 +118,11 @@ Friend Class CalendarMonth
 		Else
 			d = getFirst(year2, month2)
 			While d >= getFirst(year1, month1)
-				p = datePageName(Year(d), Month(d), VB.Day(d))
+                p = datePageName(d.Year, d.Month, d.Day)
 				If store.pageExists(p) Then
 					s = s & includedDay(p, store)
 				End If
-				d = System.Date.FromOADate(d.ToOADate - 1)
+                d = System.DateTime.FromOADate(d.ToOADate - 1)
 			End While
 		End If
 		includeAllBetween = s

@@ -131,7 +131,7 @@ Friend Class ModelImplementation
 	
 	
 	Public Sub savePage()
-		Call myStore.savePage(myCurrentPage)
+        Call myStore.savePage(myCurrentPage)
 		
 		' now special behaviours
 		If myCurrentPage.pageName = "LinkTypeDefinitions" Then
@@ -321,7 +321,7 @@ Friend Class ModelImplementation
 	Private Function ControllableModel_newNetworkPage() As String Implements _ControllableModel.newNetworkPage
 		Dim p As _page
 		p = POLICY_getFactory().getNewPageInstance
-		p.createdDate = Today
+        p.createdDate = DateTime.Now
 		p.raw = "#Network,, 1" & vbCrLf & "----" & vbCrLf & "----"
 		
 		Call p.cook(prep, chef, myBacklinks)
@@ -333,7 +333,7 @@ Friend Class ModelImplementation
 	Private Function ControllableModel_newPage() As String Implements _ControllableModel.newPage
 		Dim p As _page
 		p = POLICY_getFactory().getNewPageInstance
-		p.createdDate = Today
+        p.createdDate = DateTime.Now
 		Call setCurrentPage(p)
 		myCurrentPageName = ""
 		ControllableModel_newPage = "new page"

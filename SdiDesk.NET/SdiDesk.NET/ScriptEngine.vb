@@ -244,9 +244,9 @@ err1:
 		Dim d As Date
 		Dim monthNumber, yearNumber As Short
 		Dim mArg As String
-		d = Today
-		monthNumber = Month(d)
-		yearNumber = Year(d)
+        d = DateTime.Now
+        monthNumber = d.Month ' Month(d)
+        yearNumber = d.Year ' Year(d)
 		
 		Dim m, s As String
 		m = ti.monthName_Renamed(monthNumber)

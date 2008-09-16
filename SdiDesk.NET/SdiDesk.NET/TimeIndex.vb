@@ -34,7 +34,7 @@ Friend Class TimeIndex
 	End Sub
 	
 	Public Sub loadMonthByDate(ByRef d As Date)
-		Call loadMonthFromStore(Year(d), Month(d))
+        Call loadMonthFromStore(d.Year, d.Month)
 	End Sub
 	
 	Public Sub parseMonthFromString(ByRef s As String)
@@ -66,7 +66,7 @@ Friend Class TimeIndex
 	
 	
 	Public Sub saveMonthByDate(ByRef d As Date)
-		Call saveMonth(CShort(CStr(Year(d))), CShort(CStr(Month(d))))
+        Call saveMonth(CShort(d.Year), CShort(d.Month))
 	End Sub
 	
 	Public Function oneDayToWikiString(ByRef dayNum As Short) As String

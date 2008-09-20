@@ -1,0 +1,16 @@
+Form1 = 66, 66, 475, 514, , 22, 22, 431, 470, C
+Table = 88, 88, 497, 536, 
+TableDisplay = 110, 110, 519, 558, 
+StringTool = 0, 0, 0, 0, C
+Page = 132, 132, 541, 580, 
+Arc = 0, 0, 0, 0, C
+Network = 0, 0, 0, 0, C
+Node = 0, 0, 0, 0, C
+Point = 0, 0, 0, 0, C
+PagePreparer = 154, 154, 563, 602, 
+WikiAnnotatedDataStore = 176, 176, 585, 624, 
+PageStore = 198, 198, 607, 646, 
+PageSet = 220, 220, 629, 668, 
+OCollection = 0, 0, 0, 0, C
+PageCooker = 0, 0, 0, 0, C
+VCollection = 0, 0, 0, 0, C

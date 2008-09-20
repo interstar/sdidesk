@@ -1,0 +1,110 @@
+[Root]
+Most Recent Package=SdiDeskPackage
+
+[Package|SdiDeskPackage|DesktopWiki]
+Icon1=SDIdesk.exe
+Title1=DesktopWiki
+StartIn1=$(AppPath)
+Key1=Icon1
+
+
+[Package|SdiDeskPackage|Root]
+SubWizProgID=PDWizard.SetupPkgSubWiz
+BuildFolder=C:\Program Files\Microsoft Visual Studio\VB98\projects\desktopWiki\Package
+
+[Package|SdiDeskPackage|Configure DAO ISAMs]
+Applicable=No
+
+[Package|SdiDeskPackage|Configure DAO ODBC]
+JetWorkspace=
+ODBCDirect=
+
+[Package|SdiDeskPackage|Files Found]
+
+[Package|SdiDeskPackage|Files Released]
+
+[Package|SdiDeskPackage|Missing Dependency Information]
+C:\Program Files\Microsoft Visual Studio\VB98\projects\desktopWiki\exporters\DummyExporter.exe=
+
+[Package|SdiDeskPackage|Out-of-Date Dependency Information]
+C:\WINDOWS\SYSTEM\Msflxgrd.ocx=
+C:\WINDOWS\SYSTEM\COMDLG32.OCX=
+C:\WINDOWS\SYSTEM\RICHTX32.OCX=
+
+[Package|SdiDeskPackage|Files Added]
+c:\program files\microsoft visual studio\vb98\projects\desktopwiki\exporters\dummyexporter.exe=
+
+[Package|SdiDeskPackage|Files Removed]
+
+[Package|SdiDeskPackage|Files In Project]
+C:\Program Files\Microsoft Visual Studio\VB98\projects\desktopWiki\SDIdesk.exe=Yes
+C:\WINDOWS\SYSTEM\MSVBVM60.DLL=Yes
+C:\WINDOWS\SYSTEM\OLEAUT32.DLL=Yes
+C:\WINDOWS\SYSTEM\OLEPRO32.DLL=Yes
+C:\WINDOWS\SYSTEM\Asycfilt.dll=Yes
+C:\WINDOWS\SYSTEM\STDOLE2.TLB=Yes
+C:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\COMCAT.DLL=Yes
+C:\WINDOWS\SYSTEM\RICHTX32.OCX=Yes
+C:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\RICHED32.DLL=Yes
+C:\WINDOWS\SYSTEM\COMDLG32.OCX=Yes
+C:\WINDOWS\SYSTEM\Msflxgrd.ocx=Yes
+C:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\SETUP.EXE=Yes
+C:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\SETUP1.EXE=Yes
+C:\WINDOWS\SYSTEM\VB6STKIT.DLL=Yes
+C:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\ST6UNST.EXE=Yes
+C:\Program Files\Microsoft Visual Studio\VB98\projects\desktopWiki\exporters\DummyExporter.exe=Yes
+
+[Package|SdiDeskPackage|Configure Registry Files]
+Applicable=No
+
+[Package|SdiDeskPackage|Configure Remote Servers]
+Applicable=No
+
+[Package|SdiDeskPackage|Install Locations]
+C:\Program Files\Microsoft Visual Studio\VB98\projects\desktopWiki\SDIdesk.exe=$(AppPath)
+C:\WINDOWS\SYSTEM\MSVBVM60.DLL=$(WinSysPathSysFile)
+C:\WINDOWS\SYSTEM\OLEAUT32.DLL=$(WinSysPathSysFile)
+C:\WINDOWS\SYSTEM\OLEPRO32.DLL=$(WinSysPathSysFile)
+C:\WINDOWS\SYSTEM\Asycfilt.dll=$(WinSysPathSysFile)
+C:\WINDOWS\SYSTEM\STDOLE2.TLB=$(WinSysPathSysFile)
+C:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\COMCAT.DLL=$(WinSysPathSysFile)
+C:\WINDOWS\SYSTEM\RICHTX32.OCX=$(WinSysPath)
+C:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\RICHED32.DLL=$(WinSysPathSysFile)
+C:\WINDOWS\SYSTEM\COMDLG32.OCX=$(WinSysPath)
+C:\WINDOWS\SYSTEM\Msflxgrd.ocx=$(WinSysPath)
+C:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\SETUP.EXE=$(AppPath)
+C:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\SETUP1.EXE=$(WinPath)
+C:\WINDOWS\SYSTEM\VB6STKIT.DLL=$(WinSysPathSysFile)
+C:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\ST6UNST.EXE=$(WinPath)
+C:\Program Files\Microsoft Visual Studio\VB98\projects\desktopWiki\exporters\DummyExporter.exe=$(AppPath)\exporters
+
+[Package|SdiDeskPackage|Configure Shared Files]
+Applicable=Yes
+C:\Program Files\Microsoft Visual Studio\VB98\projects\desktopWiki\SDIdesk.exe=No
+C:\Program Files\Microsoft Visual Studio\VB98\projects\desktopWiki\exporters\DummyExporter.exe=No
+
+[Package|SdiDeskPackage|Distribution]
+Type=single
+Size=
+Title=SdiDesk 0.2.0
+
+[Package|SdiDeskPackage|IconGroups]
+Group0=SdiDesk
+PrivateGroup0=True
+Parent0=$(Programs)
+
+[Package|SdiDeskPackage|SdiDesk]
+Icon1=SDIdesk.exe
+Title1=SdiDesk
+StartIn1=$(AppPath)
+Key1=Icon1
+
+[Package|SdiDeskPackage|Package]
+PackageFolder=C:\Program Files\Microsoft Visual Studio\VB98\projects\desktopWiki\Package
+ProjectFolder=C:\Program Files\Microsoft Visual Studio\VB98\projects\desktopWiki
+ServerSideCab=
+File1=C:\Program Files\Microsoft Visual Studio\VB98\projects\desktopWiki\Package\setup.exe
+File2=C:\Program Files\Microsoft Visual Studio\VB98\projects\desktopWiki\Package\Setup.Lst
+File3=C:\Program Files\Microsoft Visual Studio\VB98\projects\desktopWiki\Package\SDIdesk.CAB
+Handler1=PDWizard.FolderDplySubWiz
+Handler2=PDWizard.WebPostDplySubWiz

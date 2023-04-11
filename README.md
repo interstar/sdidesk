@@ -1,21 +1,19 @@
 # SdiDesk
 Automatically exported from code.google.com/p/sdidesk 
 
-This was a version of SdiDesk that I had converted from VB Classic to VB.NET. I'm not a VB.NET programmer, 
-but at the time it felt like this was one possible future for SdiDesk. So I hired someone to do it.
+This was a version of SdiDesk, a wiki-like personal notebook that I wrote in 2004, that has been ported from VB Classic to VB.NET.
 
-In the event, I never went further. I didn't really want to commit more to the Microsoft treadmill, and VB.NET seemed 
-a hell of a lot more clunky and awkward than VB Classic, losing the main attraction of being in VB at all. 
+At the time it felt like this was one possible future for SdiDesk. So I hired someone to do it, as I wasn't experienced with VB.NET myself.
 
-Ultimately I decided that the future of SdiDesk was conversion to the Smallest Federated Wiki and / or possibly my new 
-Outliner with Wiki Linking. In both cases, the UI and the bulk of the code moves into javascript while a light server is 
-in Python or Java. (And may go away altogether if I adopt remoteStorage.js.) 
+In the event, I never took it further. I didn't really want to commit more to the Microsoft treadmill, and VB.NET seemed a hell of a lot more clunky and awkward than VB Classic, losing the main attraction of being in VB at all. 
 
-Find out more on [Project ThoughtStorms](http://project.thoughtstorms.info/) 
+Ultimately I decided that the future of SdiDesk was something else.
 
-This code is new in github as it's been rescued from Google Code (which is now closing down) But I don't have any plans 
-to work on it. However, if YOU are interested in SdiDesk in VB.NET, then message me. I can give you some overview of 
-how it all works, and perhaps even get interested again :-)
+At this point in time (writing in 2023), all my experiments in wiki-like note-taking / tools for thought etc, are now focused on [Cardigan Bay](https://github.com/interstar/cardigan-bay) A Clojure based wiki-engine. Cardigan Bay is under active development, I'm using it for my own personal "digital garden" and other projects, and it has some cool features. Especially the ability to embed executable Clojure code on pages.
+
+I have no plans to continue working with SdiDesk or this code-base, but I'm leaving it here in case there are an VB coders who are interested. If that's you, then feel free to message me. I may be able to give you some pointers / explanation of how it works (to the extent I can remember)
+
+-- Phil Jones
 
 
 
